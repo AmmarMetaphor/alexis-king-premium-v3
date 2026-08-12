@@ -7,6 +7,8 @@ Run locally:
 
 Premium V3 previews are deployed through Cloudflare Pages.
 
+Cloudflare Pages preview deployments are enabled for the Premium V3 review workflow.
+
 Cloudflare Pages:
 - branch: main
 - build command: blank

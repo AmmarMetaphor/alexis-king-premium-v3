@@ -24,10 +24,13 @@ Main routes:
 /work-with-me
 /speaker-kit
 
-Funnel routes:
+Assessment routes:
+/assessment/quiz
 /assessment/results-low
 /assessment/results-mid
 /assessment/results-high
+
+Funnel routes:
 /course-offer
 /waitlist
 /thank-you

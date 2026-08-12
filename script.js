@@ -1,7 +1,7 @@
 
 const navToggle=document.querySelector('[data-nav-toggle]'),navLinks=document.querySelector('[data-nav-links]');
 if(navToggle&&navLinks){navToggle.addEventListener('click',()=>{const open=navLinks.classList.toggle('is-open');navToggle.setAttribute('aria-expanded',String(open))});navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false')}))}
-document.querySelectorAll('img').forEach(img=>{const parent=img.closest('.hero-portrait,.about-photo,.video-stage');const loaded=()=>parent?.classList.add('has-image');if(img.complete&&img.naturalWidth)loaded();img.addEventListener('load',loaded);img.addEventListener('error',()=>{img.hidden=true})});
+document.querySelectorAll('img').forEach(img=>img.addEventListener('error',()=>{img.hidden=true}));
 const revealEls=document.querySelectorAll('.reveal');if('IntersectionObserver'in window){const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');io.unobserve(entry.target)}}),{threshold:.12});revealEls.forEach(el=>io.observe(el))}else revealEls.forEach(el=>el.classList.add('is-visible'));
 const modal=document.querySelector('[data-video-modal]'),frame=document.querySelector('[data-video-frame]'),close=document.querySelector('[data-close-video]');
 function closeModal(){if(!modal)return;modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');if(frame)frame.innerHTML=''}

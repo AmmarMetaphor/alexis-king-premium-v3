@@ -1,29 +1,41 @@
 # Asset Map
 
+This file originally described a planned `assets/` structure. The assets actually
+delivered for V3 live at the repo root under `/images`, `/logos`, and `/books`
+(not under `/assets/`). The map below reflects what is really on disk and how
+each file is used.
+
 ## Brand
-- assets/images/alexis-king-primary.png
-- assets/images/alexis-king-inverted.png
-- assets/images/career-ninja-primary.png
-- assets/images/career-ninja-inverted.png
-- assets/images/career-ninja-stamp.png
+- logos/alexis-logo-seal-circular.webp — circular seal used as the site brand mark (nav)
+- No standalone horizontal wordmark lockup or Career Ninja Mindset® stamp files exist yet.
 
-## Photography
-- assets/images/alexis-hero-portrait.webp — warm portrait, eye contact, authoritative
-- assets/images/alexis-speaker-reel-thumb.webp — stage, mid-gesture, audience visible
-- assets/images/alexis-stage-wide.webp — wide stage image
-- assets/images/alexis-candid.webp — approachable professional image
-- assets/images/alexis-about-candid.webp
-- assets/images/alexis-about-stage.webp
-- assets/images/alexis-books-hero.webp
-- assets/images/alexis-work-hero.webp
+## Photography (used)
+- images/Favorite-Aragon-Headshot-Alexis-King-2026-05-07-29.jpeg — homepage hero, full-bleed
+- images/Favorite-Aragon-Headshot-Alexis-King-2026-05-07-24.jpeg — homepage about-strip
+- images/Alexis-Green-dress.webp — "professionals" path card; about.html bio photo
+- images/Alexis-Action-Shot 2.jpeg — "organizations" path card (resized from 20MB/6720px source)
+- images/Alexis-Speaking-conference..webp — speaker reel thumbnail (home + speaking.html)
+- images/TCSHRM5.png — speaking.html subhero (major stage image)
+- images/Alexis-stage.jpg — speaker-kit.html subhero
+- images/Alexis-Action-Shot-13.webp — about.html subhero
+- images/Favorite-Aragon-Headshot-Alexis-King-2026-05-07-54.jpeg — books.html subhero
+- images/Alexis-Stage-2.jpg — work-with-me.html subhero (recompressed from a 9.3MB PNG source)
 
-## Conference logos
-tcshrm.svg · atd-nyc.svg · ieee-wie.svg · indiana-hima.svg · disrupthr.svg · investher.svg · hr-nebraska.svg · midwestcon.svg · ignite.svg
+## Photography (available, not currently placed)
+- images/Alexis-King-Headshot-1.webp, images/Alexis-Media-Kit-2026.webp (marketing mockup, not raw photography),
+  images/alexis-photo-5219.webp (SHRM step-and-repeat backdrop), images/Alexis-Candid.heic,
+  images/Alexis-stage-3.HEIC (browsers do not render HEIC in `<img>` reliably — convert before use)
+
+## Conference logos (all present, used as-is — no recoloring)
+logos/tcshrm.png · logos/atd-nyc.png · logos/ieee-wie.webp · logos/indiana-hima.webp ·
+logos/disrupthr.webp · logos/Investher.png · logos/hr-nebraska.jpg · logos/midwestcon.png
+
+No IGNITE Summit logo file was supplied; it appears as a text label only in the upcoming-stages list.
 
 ## Books
-- assets/books/career-ninja-mindset.webp
-- assets/books/wired-to-win.webp
-- assets/books/execution-excellence.webp
+- books/career-ninja-mindset.webp
+- books/wired-to-win.webp
+- books/execution-excellence.webp
 
 ## Still required
 - official final brand hex values

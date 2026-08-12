@@ -5,6 +5,8 @@ Ground-up rebuild based on the client-approved speaker-site architecture.
 Run locally:
 `python3 -m http.server 8080`
 
+Premium V3 previews are deployed through Cloudflare Pages.
+
 Cloudflare Pages:
 - branch: main
 - build command: blank

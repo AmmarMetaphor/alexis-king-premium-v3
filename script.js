@@ -1,6 +1,9 @@
 
 const navToggle=document.querySelector('[data-nav-toggle]'),navLinks=document.querySelector('[data-nav-links]');
-if(navToggle&&navLinks){navToggle.addEventListener('click',()=>{const open=navLinks.classList.toggle('is-open');navToggle.setAttribute('aria-expanded',String(open))});navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false')}))}
+function closeNav(){if(!navLinks||!navToggle)return;navLinks.classList.remove('is-open');navToggle.setAttribute('aria-expanded','false')}
+if(navToggle&&navLinks){navToggle.addEventListener('click',()=>{const open=navLinks.classList.toggle('is-open');navToggle.setAttribute('aria-expanded',String(open))});navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeNav));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&navLinks.classList.contains('is-open')){closeNav();navToggle.focus()}})}
+const siteHeader=document.querySelector('.site-header');
+if(siteHeader){const onScroll=()=>siteHeader.classList.toggle('is-scrolled',window.scrollY>24);onScroll();window.addEventListener('scroll',onScroll,{passive:true})}
 document.querySelectorAll('img').forEach(img=>img.addEventListener('error',()=>{img.hidden=true}));
 const revealEls=document.querySelectorAll('.reveal');if('IntersectionObserver'in window){const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');io.unobserve(entry.target)}}),{threshold:.12});revealEls.forEach(el=>io.observe(el))}else revealEls.forEach(el=>el.classList.add('is-visible'));
 const modal=document.querySelector('[data-video-modal]'),frame=document.querySelector('[data-video-frame]'),close=document.querySelector('[data-close-video]');

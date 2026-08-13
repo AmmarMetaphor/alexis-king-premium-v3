@@ -9,6 +9,10 @@ each file is used.
 - logos/alexis-logo-seal-circular.webp — circular seal used as the site brand mark (nav)
 - No standalone horizontal wordmark lockup or Career Ninja Mindset® stamp files exist yet.
 
+## Video
+- Homepage hero is wired to play `/assets/video/alexis-hero-background.mp4` as an autoplaying, muted, looping background layer, with the existing hero photograph serving as the poster/loading/error/reduced-motion fallback.
+- That video file has not been supplied yet — the hero currently renders the photograph only, exactly as the fallback path is designed to behave. No code changes are needed once the real MP4 is added at that exact path; it will begin playing automatically for users who don't have `prefers-reduced-motion: reduce` set.
+
 ## Photography (used)
 - images/Favorite-Aragon-Headshot-Alexis-King-2026-05-07-29.jpeg — homepage hero, full-bleed
 - images/Favorite-Aragon-Headshot-Alexis-King-2026-05-07-24.jpeg — homepage about-strip

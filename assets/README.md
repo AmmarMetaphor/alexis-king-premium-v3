@@ -24,10 +24,11 @@ each file is used.
 - images/Alexis-Action-Shot-13.webp — about.html subhero
 - images/Favorite-Aragon-Headshot-Alexis-King-2026-05-07-54.jpeg — books.html subhero
 - images/Alexis-Stage-2.jpg — work-with-me.html subhero (recompressed from a 9.3MB PNG source)
+- images/alexis-photo-5219.webp — speaking.html Keynote 03 side image (SHRM step-and-repeat backdrop, confident stance fits the "visible/invincible" theme)
 
 ## Photography (available, not currently placed)
 - images/Alexis-King-Headshot-1.webp, images/Alexis-Media-Kit-2026.webp (marketing mockup, not raw photography),
-  images/alexis-photo-5219.webp (SHRM step-and-repeat backdrop), images/Alexis-Candid.heic,
+  images/Alexis-Candid.heic,
   images/Alexis-stage-3.HEIC (browsers do not render HEIC in `<img>` reliably — convert before use)
 
 ## Conference logos (all present, used as-is — no recoloring)

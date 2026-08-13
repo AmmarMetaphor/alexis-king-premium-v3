@@ -5,6 +5,10 @@ Ground-up rebuild based on the client-approved speaker-site architecture.
 Run locally:
 `python3 -m http.server 8080`
 
+Premium V3 previews are deployed through Cloudflare Pages.
+
+Cloudflare Pages preview deployments are enabled for the Premium V3 review workflow.
+
 Cloudflare Pages:
 - branch: main
 - build command: blank
@@ -20,10 +24,13 @@ Main routes:
 /work-with-me
 /speaker-kit
 
-Funnel routes:
+Assessment routes:
+/assessment/quiz
 /assessment/results-low
 /assessment/results-mid
 /assessment/results-high
+
+Funnel routes:
 /course-offer
 /waitlist
 /thank-you

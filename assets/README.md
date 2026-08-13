@@ -10,8 +10,8 @@ each file is used.
 - No standalone horizontal wordmark lockup or Career Ninja Mindset® stamp files exist yet.
 
 ## Video
-- Homepage hero is wired to play `/assets/video/alexis-hero-background.mp4` as an autoplaying, muted, looping background layer, with the existing hero photograph serving as the poster/loading/error/reduced-motion fallback.
-- That video file has not been supplied yet — the hero currently renders the photograph only, exactly as the fallback path is designed to behave. No code changes are needed once the real MP4 is added at that exact path; it will begin playing automatically for users who don't have `prefers-reduced-motion: reduce` set.
+- assets/alexis-hero-background.mp4 — homepage hero background video, autoplaying/muted/looping. The existing hero photograph remains the poster and the loading/error/reduced-motion fallback.
+- The file as originally uploaded was encoded in HEVC (H.265), which Chrome, Firefox, and most non-Safari browsers cannot decode for `<video>` playback. Re-muxed to H.264 (High profile) + AAC with the `moov` atom moved to the front (faststart) for universal browser support and fast start of playback — same footage, same resolution/duration, no re-crop or content change.
 
 ## Photography (used)
 - images/Favorite-Aragon-Headshot-Alexis-King-2026-05-07-29.jpeg — homepage hero, full-bleed

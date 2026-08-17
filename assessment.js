@@ -56,6 +56,61 @@
   };
   window.AssessmentShared = Shared;
 
+  /* ---------------- Assessment lead gate ---------------- */
+  var gateForm = document.getElementById('assessment-gate');
+  if (gateForm) {
+    var nameInput = document.getElementById('gate-name');
+    var emailInput = document.getElementById('gate-email');
+    var submitBtn = document.getElementById('gate-submit');
+    var gateError = document.getElementById('gate-error');
+
+    var gateValid = function () {
+      return nameInput.value.trim().length > 0 && emailInput.value.trim().length > 0 && emailInput.checkValidity();
+    };
+    var showGateError = function (message) {
+      gateError.textContent = message;
+      gateError.hidden = false;
+    };
+    var hideGateError = function () {
+      gateError.hidden = true;
+    };
+    var syncButton = function () {
+      submitBtn.disabled = !gateValid();
+      if (!submitBtn.disabled) hideGateError();
+    };
+
+    nameInput.addEventListener('input', syncButton);
+    emailInput.addEventListener('input', syncButton);
+
+    gateForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = nameInput.value.trim();
+      var email = emailInput.value.trim();
+      if (!name) {
+        showGateError('Please enter your name.');
+        return;
+      }
+      if (!email || !emailInput.checkValidity()) {
+        showGateError('Please enter a valid email address.');
+        return;
+      }
+      hideGateError();
+
+      // GoHighLevel integration point: submit { name, email } to a real
+      // endpoint here once one exists, to create/update the contact before
+      // they begin the assessment. No credentials or network requests exist
+      // in this prototype — the values are kept in sessionStorage only.
+      try {
+        sessionStorage.setItem('assessmentName', name);
+        sessionStorage.setItem('assessmentEmail', email);
+      } catch (e2) { /* sessionStorage unavailable — assessment still works, just won't personalize */ }
+
+      location.href = '/assessment/quiz';
+    });
+
+    syncButton();
+  }
+
   /* ---------------- Quiz page ---------------- */
   var quizForm = document.getElementById('quiz-form');
   if (quizForm) {

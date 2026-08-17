@@ -8,6 +8,16 @@
 <main id="main"><section class="hero hero--assessment"><div class="hero-media">
 <img class="hero-image" src="/images/Favorite-Aragon-Headshot-Alexis-King-2026-05-07-29.jpeg" alt="Alexis King smiling warmly, making direct eye contact">
 </div>
-<div class="container hero-inner"><div class="assessment-card"><h1>How ready are you for what changes next?</h1><p class="body-lg light-muted">The Change-Readiness Assessment looks at the three parts of The Career Ninja Mindset® that help you move through disruptive change with more focus and agency.</p><div class="ps-mini"><span>Prioritize</span><span>Practice</span><span>Persistence</span></div><a class="btn btn-teal btn-wide" href="/assessment/quiz">Start the Assessment</a></div></div>
+<div class="container hero-inner"><div class="assessment-card"><h1>How ready are you for what changes next?</h1><p class="body-lg light-muted">The Change-Readiness Assessment looks at the three parts of The Career Ninja Mindset® that help you move through disruptive change with more focus and agency.</p><div class="ps-mini"><span>Prioritize</span><span>Practice</span><span>Persistence</span></div>
+<form class="assessment-gate" id="assessment-gate" novalidate>
+<div class="assessment-gate-fields">
+<div class="field"><label for="gate-name">Your Name</label><input id="gate-name" name="name" type="text" autocomplete="name" placeholder="Enter your name" required></div>
+<div class="field"><label for="gate-email">Email Address</label><input id="gate-email" name="email" type="email" autocomplete="email" placeholder="Enter your email" required></div>
+</div>
+<p class="assessment-gate-error" id="gate-error" role="alert" hidden></p>
+<button type="submit" class="btn btn-teal btn-wide" id="gate-submit" disabled>Start the Assessment</button>
+</form>
+</div></div>
 </section></main>
-<script src="/script.js"></script></body></html>
+<script src="/script.js"></script>
+<script src="/assessment.js"></script></body></html>
